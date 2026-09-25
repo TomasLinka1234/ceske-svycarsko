@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Národní park České Švýcarsko | Průvodce a Rezervace</title>
+    <meta name="description" content="Oficiální turistický průvodce Národním parkem České Švýcarsko. Pravčická brána, Edmundova soutěska, rezervace výletů s průvodcem.">
+    <meta name="theme-color" content="#06140e">
+    
+    <!-- Open Graph pro SEO -->
+    <meta property="og:title" content="Národní park České Švýcarsko">
+    <meta property="og:description" content="Prozkoumejte unikátní pískovcová skalní města a rezervujte si výlet.">
+    <meta property="og:type" content="website">
+
+    <!-- Preload kritického CSS -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Inline kritický rendering ochrana -->
+    <style>
+        body { background-color: #06140e; color: #f0fdf4; font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGACE -->
+    <header id="main-header">
+        <div class="nav-container">
+            <a href="#" class="logo" aria-label="NP České Švýcarsko Domů">NP <span>České Švýcarsko</span></a>
+            <nav aria-label="Hlavní navigace">
+                <ul>
+                    <li><a href="#o-parku">O parku</a></li>
+                    <li><a href="#lokace">Lokace</a></li>
+                    <li><a href="#rezervace">Rezervace</a></li>
+                    <li><a href="#dotazy">Dotazy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HLAVNÍ OBSAH -->
+    <main id="main-content">
+        <!-- HERO SEKCE -->
+        <section class="hero" aria-label="Úvodní sekce">
+            <div class="hero-content">
+                <h1>Objevení krás České Švýcarsko</h1>
+                <p>Fascinující pískovcová skalní města, hluboké rokle a dechberoucí vyhlídky v srdci národního parku.</p>
+                <a href="#lokace" class="btn-primary">Prozkoumat lokace</a>
+            </div>
+        </section>
+
+        <!-- STATISTIKY -->
+        <section class="stats-section" aria-label="Základní fakta o parku">
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-value">79 km²</div>
+                    <h2 class="stat-label">Celková rozloha</h2>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-value">2000</div>
+                    <h2 class="stat-label">Rok založení</h2>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-value">726 m</div>
+                    <h2 class="stat-label">Děčínský Sněžník</h2>
+                </article>
+                <article class="stat-card">
+                    <div class="stat-value">1100+</div>
+                    <h2 class="stat-label">Chráněných druhů</h2>
+                </article>
+            </div>
+        </section>
+
+        <!-- O PARKU -->
+        <section id="o-parku" class="container about-section">
+            <h2 class="section-title">O Národním Parku</h2>
+            <p class="section-subtitle">Přírodní skvost na hranicích s Německem formovaný miliony let geologického vývoje.</p>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <h3>Pískovcová skalní města a hluboká údolí</h3>
+                    <p>Národní park České Švýcarsko byl vyhlášen 1. ledna 2000 a představuje unikátní území tvořené kvádrovými pískovci. Krajinný ráz je charakterizován fascinujícími skalními věžemi, branami a roklemi.</p>
+
+                    <h3>Rozmanitá fauna a flóra</h3>
+                    <p>Díky klimatu a členitému reliéfu se zde setkáváme s fenoménem klimatické inverze. V chladných roklích se daří horským druhům, zatímco na skalních vrcholech žijí teplomilná společenstva.</p>
+                </article>
+
+                <aside class="about-sidebar">
+                    <div class="about-card">
+                        <h3>Pravidla návštěvníků</h3>
+                        <ul class="rules-list">
+                            <li>Pohybujte se pouze po vyznačených trasách</li>
+                            <li>Zákaz zakládání ohně a kempování</li>
+                            <li>Třídění a odvoz vlastních odpadků</li>
+                            <li>Psi musí být stále na vodítku</li>
+                        </ul>
+                    </div>
+
+                    <div class="about-card">
+                        <h3>Informační centra</h3>
+                        <ul class="rules-list">
+                            <li>Dům Českého Švýcarska (Krásná Lípa)</li>
+                            <li>Informační středisko Saula (Jetřichovice)</li>
+                            <li>Infocentrum Hřensko</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- LOKACE A GALERIE -->
+        <section id="lokace" class="container">
+            <h2 class="section-title">Ikonická Místa</h2>
+            <p class="section-subtitle">Vyberte si cíl vaší další výpravy v parku.</p>
+
+            <div class="filter-controls" role="group" aria-label="Filtr lokací">
+                <button type="button" class="filter-btn active" data-filter="all">Všechny lokace</button>
+                <button type="button" class="filter-btn" data-filter="vyhlidka">Vyhlídky</button>
+                <button type="button" class="filter-btn" data-filter="souteska">Soutěsky</button>
+            </div>
+
+            <div class="attractions-grid" id="attractions-container">
+                <!-- Pravčická brána -->
+                <article class="card" data-category="vyhlidka">
+                    <div class="card-img-wrapper">
+                        <img src="img/pravcicka-brana.webp" width="400" height="250" loading="lazy" decoding="async" alt="Pravčická brána s historickým zámečkem Sokolí hnízdo" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Pravčická brána</h3>
+                        <p class="card-desc">Největší přirozená skalní brána v Evropě. Ikonický symbol celého národního parku s historickým zámečkem Sokolí hnízdo.</p>
+                        <div class="card-meta">
+                            <span>GPS: 50.8840 N, 14.2811 E</span>
+                            <span>Trasa: 12 km</span>
+                        </div>
+                        <button type="button" class="btn-secondary" aria-label="Detailní informace o Pravčické bráně" onclick="openModal('Pravčická brána', 'Pravčická brána je největší pískovcovou skalní branou v Evropě. V blízkosti naleznete zámeček Sokolí hnízdo z roku 1881 s výletní restaurací a muzeem NP.')">Detail & Tipy</button>
+                    </div>
+                </article>
+
+                <!-- Mariina vyhlídka -->
+                <article class="card" data-category="vyhlidka">
+                    <div class="card-img-wrapper">
+                        <img src="img/mariina-vyhlidka.webp" width="400" height="250" loading="lazy" decoding="async" alt="Mariina vyhlídka s dřevěným altánem na skalním vrcholu" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Mariina vyhlídka</h3>
+                        <p class="card-desc">Skalní vrch u Jetřichovic s ikonickým dřevěným altánem nabízejícím kruhový výhled na celek Jetřichovických stěn.</p>
+                        <div class="card-meta">
+                            <span>GPS: 50.8596 N, 14.3925 E</span>
+                            <span>Trasa: 4.5 km</span>
+                        </div>
+                        <button type="button" class="btn-secondary" aria-label="Detailní informace o Mariině vyhlídce" onclick="openModal('Mariina vyhlídka', 'Výstup vede po schodech a skalních tesaných cestách. Na vrcholku se nachází obnovený dřevěný altán s kruhovým výhledem.')">Detail & Tipy</button>
+                    </div>
+                </article>
+
+                <!-- Edmundova soutěska -->
+                <article class="card" data-category="souteska">
+                    <div class="card-img-wrapper">
+                        <img src="img/edmundova-souteska.webp" width="400" height="250" loading="lazy" decoding="async" alt="Lodička s turisty v řekou sevřené Edmundově soutěsce" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Edmundova soutěska</h3>
+                        <p class="card-desc">Hluboký skalní kaňon řeky Kamenice přístupný výhradně romantickou plavbou na lodičkách s převozníkem.</p>
+                        <div class="card-meta">
+                            <span>GPS: 50.8542 N, 14.2411 E</span>
+                            <span>Plavba: 20 min</span>
+                        </div>
+                        <button type="button" class="btn-secondary" aria-label="Detailní informace o Edmundově soutěsce" onclick="openModal('Edmundova soutěska', 'Romantická plavba po řece Kamenici obklopené pískovcovými stěnami vysokými až 150 metrů.')">Detail & Tipy</button>
+                    </div>
+                </article>
+
+                <!-- Děčínský Sněžník -->
+                <article class="card" data-category="vyhlidka">
+                    <div class="card-img-wrapper">
+                        <img src="img/decinsky-sneznik.webp" width="400" height="250" loading="lazy" decoding="async" alt="Kamenná rozhledna na vrcholku Děčínského Sněžníku" class="card-img">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Děčínský Sněžník</h3>
+                        <p class="card-desc">Nejvyšší stolová hora v ČR (726 m n. m.) s nejstarší kamennou rozhlednou nabízející úchvatné výhledy do Česka i Německa.</p>
+                        <div class="card-meta">
+                            <span>GPS: 50.7936 N, 14.1083 E</span>
+                            <span>Trasa: 7 km</span>
+                        </div>
+                        <button type="button" class="btn-secondary" aria-label="Detailní informace o Děčínském Sněžníku" onclick="openModal('Děčínský Sněžník', 'Historická kamenná rozhledna z roku 1864 na vrcholku stolové hory zaručuje krásný kruhový rozhled.')">Detail & Tipy</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMULÁŘE SECTION -->
+        <section id="rezervace" class="container">
+            <h2 class="section-title">Rezervace a Dotazy</h2>
+            <p class="section-subtitle">Spočítejte si cenu výletu s průvodcem nebo nám pošlete dotaz.</p>
+
+            <div class="forms-grid">
+                <!-- REZERVAČNÍ FORMULÁŘ S KALKULÁTOREM -->
+                <div class="form-card">
+                    <h3>Kalkulátor výletu s průvodcem</h3>
+                    <form id="calc-form">
+                        <div class="form-group">
+                            <label for="trip-type">Typ výpravy:</label>
+                            <select id="trip-type" class="form-control" name="trip-type">
+                                <option value="300">Skalní vyhlídky (300 Kč/osoba)</option>
+                                <option value="450">Soutěsky &amp; Lodičky (450 Kč/osoba)</option>
+                                <option value="600">Celodenní okruh NP (600 Kč/osoba)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="people-count">Počet osob: <span id="people-val">2</span></label>
+                            <input type="range" id="people-count" name="people-count" min="1" max="10" value="2" class="form-control" aria-label="Počet osob slider">
+                        </div>
+                        <div class="form-group">
+                            <label for="res-date">Datum výletu:</label>
+                            <input type="date" id="res-date" name="res-date" class="form-control" required>
+                        </div>
+                        <div class="price-display" aria-live="polite">Celkem: <span id="total-price">600</span> Kč</div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Odeslat rezervaci</button>
+                    </form>
+                </div>
+
+                <!-- DOTAZNÍKOVÝ FORMULÁŘ -->
+                <div class="form-card" id="dotazy">
+                    <h3>Položit dotaz</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Jméno a příjmení:</label>
+                            <input type="text" id="contact-name" name="contact-name" class="form-control" required placeholder="Jan Novák" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Emailová adresa:</label>
+                            <input type="email" id="contact-email" name="contact-email" class="form-control" required placeholder="jan@example.cz" autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-msg">Váš dotaz:</label>
+                            <textarea id="contact-msg" name="contact-msg" rows="4" class="form-control" required placeholder="Dotazy k parkování, přístupnosti trasy..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Odeslat dotaz</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Správa Národního parku České Švýcarsko. Vytvořeno pro akademické účely.</p>
+    </footer>
+
+    <!-- MODAL WINDOW -->
+    <div class="modal" id="info-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button type="button" class="close-btn" aria-label="Zavřít okno" onclick="closeModal()">&times;</button>
+            <h3 id="modal-title" style="color: #34d399; margin-bottom: 1rem;">---</h3>
+            <p id="modal-body" style="color: #a7f3d0; line-height: 1.6;">---</p>
+        </div>
+    </div>
+
+    <!-- Načtení odloženého JS bez blokování vykreslování -->
+    <script src="script.js" defer></script>
+</body>
+</html>
